@@ -21,3 +21,7 @@ async def on_member_remove(member):
 @client.command()
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency*1000)}ms')
+
+@client.command()
+async def complete(ctx,process):
+    await ctx.send(f'{process} is random.randint(0,100)% complete')
